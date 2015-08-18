@@ -6,7 +6,7 @@ var app = express();
 var del = require('del');
 
 app.post('/upload', upload.single('file'), function (req, res, next) {
-  // req.file is the `avatar` file 
+  // req.file is the uploaded file 
   // req.body will hold the text fields, if there were any
   var f = req.file;
   if (f) {
